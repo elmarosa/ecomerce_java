@@ -4,11 +4,26 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 
+import com.sun.net.httpserver.HttpExchange;
+import com.sun.net.httpserver.HttpHandler;
+import com.sun.net.httpserver.HttpServer;
+
+import java.io.IOException;
+import java.net.InetSocketAddress;
+import java.util.concurrent.Executors;
+
 // class main
 public class Main {
     public Main() {
+        public static void main(String[] args) throuws IOExpection {
+        HttpServer httpServer = HttpServer.create(new InetSocketAddress(hostname:"localhost", port:1350), blacklog:0);
+
+        httpServer.createContext(path:"", handler: null);
+        httpServer.setExecutor(Executors.newSingleThreadExecutor());
+        httpServer.start();
     }
 
+    public class
     // method login yang ditampilkan pertama kali ketika program dijalankan
     public static void Utama() {
         System.out.println("--------------------------------------------------------------------------------------------------------------------");
