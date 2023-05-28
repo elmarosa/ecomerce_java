@@ -15,15 +15,33 @@ import java.util.concurrent.Executors;
 // class main
 public class Main {
     public Main() {
-        public static void main(String[] args) throuws IOExpection {
+        public static void main(String[] args) throws IOException {
         HttpServer httpServer = HttpServer.create(new InetSocketAddress(hostname:"localhost", port:1350), blacklog:0);
 
-        httpServer.createContext(path:"", handler: null);
+        httpServer.createContext(path:"/Ecomerce", Handler: null);
         httpServer.setExecutor(Executors.newSingleThreadExecutor());
         httpServer.start();
     }
 
-    public class
+    public class EcomerceHandler(HttpExchange exchange) throws IOException {
+        // POST = CREATE
+        // GET = READ
+        // PUT = UPDATE
+        // DELETE = DELETE
+        // CRUD
+
+        if ("GET". equals(exchange.getRequestMethod())){
+            // send somthing interesting to user
+            outputStream outputStream = exchange.getResponseBody();
+            String responseToBeSentBack = "Hello from the other side";
+            exchange.sendRespinseHeaders(rCode:200, responseToBeSentBack.lenght();
+
+            outputStream.write(responseToBeSentBack.getByte()));
+            outputStream.flush();
+            outputStream.close();
+        }
+        }
+    }
     // method login yang ditampilkan pertama kali ketika program dijalankan
     public static void Utama() {
         System.out.println("--------------------------------------------------------------------------------------------------------------------");
